@@ -1,24 +1,21 @@
 
 public class AirConditoner {
-	int TurnOnOff;
-	int TempUpDown;
-	int defaulttemp=28;
-	int currenttemp=0;
+	AirConditonerData data = new AirConditonerData(28, 0);
 
 	public int getOnOff() {
-		return TurnOnOff;
+		return data.TurnOnOff;
 	}
 
 	public void setOnOff(int onOff) {
-		TurnOnOff = onOff;
+		data.TurnOnOff = onOff;
 	}
 
 	public int getTempUpDown() {
-		return TempUpDown;
+		return data.TempUpDown;
 	}
 
 	public void setTempUpDown(int tempUpDown) {
-		TempUpDown = tempUpDown;
+		data.TempUpDown = tempUpDown;
 	}
 
 	
@@ -26,27 +23,27 @@ public class AirConditoner {
 	
 	
 	public AirConditoner(int OnOff,int TempUpDown){
-		this.TurnOnOff=OnOff;
-		this.TempUpDown=TempUpDown;
+		this.data.TurnOnOff=OnOff;
+		this.data.TempUpDown=TempUpDown;
 		
 		
 	}
 
 	public void SetAc(AirConditoner AC){
-		if(this.TurnOnOff==1)
+		if(this.data.TurnOnOff==1)
 		{
 			System.out.println("AC is now ON");
 		}
 	}
 	public void SetTemp(AirConditoner AC){
-		if(this.TurnOnOff==0)
+		if(this.data.TurnOnOff==0)
 		{
 			System.out.println("AC is Off,turn on the AC to adjust the temperature\n\n");
 		}
-		if(this.TurnOnOff==1)
+		if(this.data.TurnOnOff==1)
 		{
-			currenttemp=defaulttemp+this.getTempUpDown();
-			System.out.println("AC temperature is:"+currenttemp+"\n\n");
+			data.currenttemp=data.defaulttemp+this.getTempUpDown();
+			System.out.println("AC temperature is:"+data.currenttemp+"\n\n");
 		}
 	}
 		

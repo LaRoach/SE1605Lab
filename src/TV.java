@@ -5,8 +5,8 @@ public class TV {
 		int VolumeIncreaseDecrease;
 		int defaultchannel=01;
 		int defaultvolume=18;
-		int channel=0;
-		int volume=0;
+		int channelno=0;
+		int vol=0;
 		
 	public int getOnOff() {
 		return TurnOnOff;
@@ -68,8 +68,8 @@ public class TV {
 		}
 		else
 		{
-			channel=this.getChannelNextPrevious()+defaultchannel;
-			System.out.println("You are on channel number "+channel);
+			channelno=this.getChannelNextPrevious()+defaultchannel;
+			System.out.println("You are on channelno number "+channelno);
 		}
 	}
 	
@@ -82,8 +82,8 @@ public class TV {
 		}
 		else
 		{
-			volume=this.getVolumeIncreaseDecrease()+defaultvolume;
-			System.out.println("Volume of TV is set to  "+volume);
+			vol=this.getVolumeIncreaseDecrease()+defaultvolume;
+			System.out.println("Volume of TV is set to  "+vol);
 		}
 	}
 	
